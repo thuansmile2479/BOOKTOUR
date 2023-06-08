@@ -20,8 +20,8 @@ import { LocantionComponent } from './pages/locantion/locantion.component';
 import { PagdetailComponent } from './pages/pagdetail/pagdetail.component';
 import { DetaillocantionComponent } from './pages/locantion/detaillocantion/detaillocantion.component';
 import { ListblogComponent } from './admin/blog/listblog/listblog.component';
-import { AddblogComponent } from './admin/blog/addblog/addblog.component';
-import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component';
+import { AddblogComponent } from './admin/blog/addblog/addblog.component'; 
+import { EditblogComponent } from './admin/blog/editblog/editblog.component';
 
 
 
@@ -45,8 +45,8 @@ import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.compo
     TourComponent,
     DetailtourComponent,
     ListblogComponent,
-    AddblogComponent,
-    AdddiadiemComponent,
+    AddblogComponent, 
+    EditblogComponent,
 
   ],
 
