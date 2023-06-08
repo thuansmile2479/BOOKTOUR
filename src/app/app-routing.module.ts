@@ -11,6 +11,8 @@ import { LocantionComponent } from './pages/locantion/locantion.component';
 import { DetaillocantionComponent } from './pages/locantion/detaillocantion/detaillocantion.component';
 import { TourComponent } from './pages/tour/tour.component';
 import { DetailtourComponent } from './pages/tour/detailtour/detailtour.component';
+import { ListblogComponent } from './admin/blog/listblog/listblog.component';
+import { AddblogComponent } from './admin/blog/addblog/addblog.component';
 
 
 const routes: Routes = [
@@ -36,6 +38,8 @@ const routes: Routes = [
     component: LayoutAdminComponent,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'blog', component: ListblogComponent }, 
+      { path: 'addblog', component: AddblogComponent },
 
     ]
   },
