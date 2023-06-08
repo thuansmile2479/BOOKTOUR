@@ -12,6 +12,9 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { LayoutClientComponent } from './layouts/layout-client/layout-client.component';
 import { LienheComponent } from './pages/lienhe/lienhe.component';
+import { GdAdminComponent } from './components/gd-admin/gd-admin.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { LienheComponent } from './pages/lienhe/lienhe.component';
     BlogComponent, 
     LayoutAdminComponent,
     LayoutClientComponent,
-    LienheComponent
+    LienheComponent,
+    GdAdminComponent,
+    DashboardComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

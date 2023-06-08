@@ -6,6 +6,8 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { LayoutClientComponent } from './layouts/layout-client/layout-client.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LienheComponent } from './pages/lienhe/lienhe.component';
+import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
+import { NotFoundError } from 'rxjs';
 
 const routes: Routes = [
   {
@@ -16,7 +18,17 @@ const routes: Routes = [
       { path: 'lienhe', component: LienheComponent }, 
 
     ]
-  }, 
+  },
+  {
+    path: 'admin',
+    component: LayoutAdminComponent,
+    children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+
+    ]  
+  },
+
+  { path: '**', component: NotFoundError },
 ];
 
 @NgModule({
