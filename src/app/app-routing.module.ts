@@ -13,6 +13,8 @@ import { TourComponent } from './pages/tour/tour.component';
 import { DetailtourComponent } from './pages/tour/detailtour/detailtour.component';
 import { ListblogComponent } from './admin/blog/listblog/listblog.component';
 import { AddblogComponent } from './admin/blog/addblog/addblog.component';
+import { EditblogComponent } from './admin/blog/editblog/editblog.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -22,10 +24,7 @@ const routes: Routes = [
       { path: '', component: HomeComponent },
       { path: 'pagedetail', component: PagdetailComponent },
       { path: 'posts', component: BlogComponent },
-      { path: 'lienhe', component: LienheComponent },
-      { path: '', component: HomeComponent },
-      { path: 'posts', component: BlogComponent },
-      { path: 'lienhe', component: LienheComponent },
+      { path: 'lienhe', component: LienheComponent },  
       { path: 'location', component: LocantionComponent },
       { path: 'location/detail/:id', component: DetaillocantionComponent },
       { path: 'tour', component: TourComponent },
@@ -34,12 +33,14 @@ const routes: Routes = [
     ]
   } ,
   {
-    path: 'admin',
-    component: LayoutAdminComponent,
+    path: 'admin', component: LayoutAdminComponent,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', component: DashboardComponent }, 
+      
       { path: 'blog', component: ListblogComponent }, 
       { path: 'addblog', component: AddblogComponent },
+      { path: 'editblog/:id', component: EditblogComponent }, 
 
     ]
   },
