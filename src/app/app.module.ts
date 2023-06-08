@@ -12,6 +12,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { LayoutClientComponent } from './layouts/layout-client/layout-client.component';
 import { LienheComponent } from './pages/lienhe/lienhe.component';
+import { PagdetailComponent } from './pages/pagdetail/pagdetail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LienheComponent } from './pages/lienhe/lienhe.component';
     BlogComponent, 
     LayoutAdminComponent,
     LayoutClientComponent,
-    LienheComponent
+    LienheComponent,
+    PagdetailComponent
   ],
   imports: [
     BrowserModule,
