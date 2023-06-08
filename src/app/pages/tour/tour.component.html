@@ -1,0 +1,139 @@
+<div class="block w-full  relative text-xl">
+  <img class="w-full max-h-[500px] z-[-1]" src="baner" alt="">
+  <div>
+      <form action="" method="post">
+      <div class="flex justify-center my-3 ">
+          <div class="border border-gray-300 rounded-md mx-2">
+              <div class="flex mx-4 my-2">
+                  <i class="fa-regular fa-paper-plane text-xl my-1 mx-2"></i>
+                  <p class="font-medium text-xl">Địa điểm</p>
+                  <select name="kyw_dd" id="">
+                      <option value="0">- Tất cả -</option>
+
+
+                  </select>
+              </div>
+          </div>
+          <div class="border border-gray-300 rounded-md mx-2">
+              <div class="flex mx-4 my-2">
+                  <i class="fa-regular fa-flag text-xl my-1 mx-2"></i>
+                  <p class="font-medium text-xl">Thể loại</p>
+                  <select name="kyw_tl" id="">
+                      <option value="0">- Tất cả -</option>
+
+                  </select>
+              </div>
+          </div>
+          <div class="border border-gray-300 rounded-md mx-2">
+              <div class="flex mx-4 my-2">
+                  <i class="fa-regular fa-calendar-days text-xl my-1 mx-2"></i>
+                  <p class="font-medium text-xl">When</p>
+                  <select name="kyw_n" id="">
+                      <option value="0">- Tất cả -</option>
+                      <option value="1">1 Ngày</option>
+                      <option value="2">2 Ngày</option>
+                      <option value="3">3 Ngày</option>
+                  </select>
+              </div>
+          </div>
+          <div class="border border-gray-300 rounded-md mx-2 bg-orange-400 hover:bg-blue-600">
+              <div class="mx-4 my-2">
+                  <button type="submit" name="submit">
+                      <p class="font-medium text-2xl">Tìm kiếm</p>
+                  </button>
+              </div>
+          </div>
+      </div>
+      </form>
+  </div>
+</div>
+<!-- content -->
+
+<div class="grid grid-cols-[75%_25%] w-11/12 mx-auto my-0">
+  <div class="my-2 w-11/12 mx-auto grid grid-cols-2 ">
+
+
+      <div class="max-w-[420px] max-h-[450px] border border-b-gray-400 bg-gray-100 rounded-xl my-2">
+          <a href="">
+              <img class="w-full max-h-[200px] rounded-t-xl" src="image/" alt="">
+          </a>
+          <div class="p-4">
+              <p class="text-sm text-slate-500 py-1"></p>
+              <a href="" class="hover:text-pink-800 py-1"></a>
+              <div class="flex">
+                  <div class="flex items-center">
+                      <i class="far fa-clock"></i>
+                      <p class="px-2"> ngày </p>
+                  </div>
+                  <div class="flex items-center">
+                      <i class="fas fa-star"></i>
+                      <p class="px-2">5 sao</p>
+                  </div>
+              </div>
+              <p>------------------------------------------</p>
+              <div class="flex py-1 items-center">
+                  <p class="text-sm text-slate-500 px-1">Giá</p>
+                  <p class="text-red-600"></p>
+              </div>
+          </div>
+      </div>
+
+
+  </div>
+
+  <div class="border-solid border-l-2 border-gray-00 pl-6">
+      <form action="">
+          <div class="py-4">
+              <p>Bảng Lọc Giá</p>
+              <div class=" border-dotted border-t-2 border-gray-500">
+                  <p>Price Range</p>
+                  <p>$135-$255</p>
+              </div>
+          </div>
+          <!-- thể loại -->
+          <div class="py-4 border-dotted border-t-2 border-gray-500">
+              <p>Thể Loại</p>
+              <input type="checkbox" value=""> Phưu Lưu <br>
+              <input type="checkbox" value=""> Mạo Hiểm <br>
+              <input type="checkbox" value=""> Du Lịch Thành Phố <br>
+              <input type="checkbox" value=""> Du Lịch Ăn Uống <br>
+          </div>
+          <!-- điểm đến -->
+          <div class="py-4 border-dotted border-t-2 border-gray-500">
+              <p class="text-sl">Điểm Đến</p>
+              <p>Bắc Bộ</p>
+              <input type="checkbox" value=""> Hà Nội <br>
+              <input type="checkbox" value=""> Hải Phòng <br>
+              <p>Trung Bộ</p>
+              <input type="checkbox" value=""> Thừa Thiên Huế <br>
+              <input type="checkbox" value=""> Đà Nẵng <br>
+              <p>Nam Bộ</p>
+              <input type="checkbox" value=""> Đà Lạt <br>
+              <input type="checkbox" value=""> Thành Phố HCM <br>
+          </div>
+          <!-- các địa điểm có số đnáh giá cao -->
+          <div class="py-4 border-dotted border-t-2 border-gray-500">
+              <p>Nhận xét</p>
+              <input type="checkbox" value=""> 5 Sao <br>
+              <input type="checkbox" value=""> 4 Sao trở lên <br>
+              <input type="checkbox" value=""> 3 Sao trở lên <br>
+              <input type="checkbox" value=""> 2 Sao trở lên <br>
+              <input type="checkbox" value=""> 1 Sao trở lên <br>
+          </div>
+          <div class="py-4  border-dotted border-t-2 border-gray-500">
+              <p>Ưu đãi phút chót</p>
+              <div class="flex py-4">
+                  <img class="max-w-[70px] max-h-[50px]" src="../image" alt="">
+                  <a class="hover:text-red-500 " href="#">Du Lịch Hà Nội</a>
+              </div>
+              <div class="flex py-4">
+                  <img class="max-w-[70px] max-h-[80px]" src="../image" alt="">
+                  <a class="hover:text-red-500 " href="#">Du Lịch Hà Nội</a>
+              </div>
+          </div>
+      </form>
+  </div>
+</div>
+<div class="w-1/4 ml-28">
+          <a class="bg-orange-300 text-white px-3 py-1 rounded-full" href=""></a>
+</div>
