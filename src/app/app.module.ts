@@ -23,6 +23,7 @@ import { ListblogComponent } from './admin/blog/listblog/listblog.component';
 import { AddblogComponent } from './admin/blog/addblog/addblog.component'; 
 import { EditblogComponent } from './admin/blog/editblog/editblog.component';
 import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.component';
+import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component';
 
 
 
@@ -47,7 +48,8 @@ import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.co
     DetailtourComponent,
     ListblogComponent,
     AddblogComponent, 
-    EditblogComponent, ListdiadiemComponent,
+    EditblogComponent, 
+    ListdiadiemComponent, EditdiadiemComponent,
 
   ],
 
