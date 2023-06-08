@@ -7,8 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HomeComponent } from './pages/home/home.component';
-import { BlogComponent } from './pages/blog/blog.component';
+import { HomeComponent } from './pages/home/home.component'; 
+import { BlogComponent } from './pages/blog/blog.component'; 
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { LayoutClientComponent } from './layouts/layout-client/layout-client.component';
 import { LienheComponent } from './pages/lienhe/lienhe.component';
@@ -18,8 +18,8 @@ import { LienheComponent } from './pages/lienhe/lienhe.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
-    BlogComponent,
+    HomeComponent, 
+    BlogComponent, 
     LayoutAdminComponent,
     LayoutClientComponent,
     LienheComponent
