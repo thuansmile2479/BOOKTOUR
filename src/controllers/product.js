@@ -103,3 +103,38 @@ export const addProduct = async function (req, res) {
     });
   }
 };
+
+export const updateProduct = async function (req, res) {
+  try {
+    const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    if (!product) {
+      return res.json({
+        message: "Cập nhật sản phẩm không thành công",
+      });
+    }
+    return res.json({
+      message: "Cập nhật sản phẩm thành công",
+      data: product,
+    });
+  } catch (error) {
+    return res.status(400).json({
+      message: error,
+    });
+  }
+};
+export const deleteProduct = async function (req, res) {
+  try {
+    const product = await Product.findByIdAndDelete(req.params.id);
+
+    return res.json({
+      message: "Xóa sản phẩm thành công",
+      product,
+    });
+  } catch (error) {
+    return res.status(400).json({
+      message: error,
+    });
+  }
+};
