@@ -5,8 +5,8 @@ import { LayoutClientComponent } from './layouts/layout-client/layout-client.com
 import { HomeComponent } from './pages/home/home.component';
 import { LienheComponent } from './pages/lienhe/lienhe.component';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
-import { NotFoundError } from 'rxjs';
-import { BlogComponent } from './pages/blog/blog.component';
+import { NotFoundError } from 'rxjs'; 
+import { BlogComponent } from './pages/blog/blog.component'; 
 
 const routes: Routes = [
   {
@@ -27,8 +27,8 @@ const routes: Routes = [
     ]  
   },
 
-  { path: '**', component: NotFoundError },
-]; 
+  { path: '**', component: NotFoundError }, 
+];   
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
