@@ -16,7 +16,6 @@ import { PagdetailComponent } from './pages/pagdetail/pagdetail.component';
 import { LocantionComponent } from './pages/locantion/locantion.component';
 import { DetaillocantionComponent } from './pages/locantion/detaillocantion/detaillocantion.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,11 +26,11 @@ import { DetaillocantionComponent } from './pages/locantion/detaillocantion/deta
     LayoutAdminComponent,
     LayoutClientComponent,
     LienheComponent,
-
     PagdetailComponent,
     LocantionComponent,
     DetaillocantionComponent,
-
+    LocantionComponent,
+    DetaillocantionComponent,
   ],
   imports: [
     BrowserModule,
