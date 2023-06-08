@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="header.component.css"> -->
+    
+</head>
+
+<body>
+    <div class="w-full">
+        <div class="container mx-auto my-0 ">
+            <header class="   z-10">
+                <div class="grid grid-cols-[25%_50%_25%]">
+                    <!-- Logo -->
+                    <div>
+                        <img class="w-6/12 mx-auto my-0" src="../../../assets/LOGO.png" alt="">
+                    </div>
+                    <!-- Menu -->
+                    <div class="mt-6 ">
+                        <ul class="w-full h-full my-auto flex justify-center items-center text-xl">
+                            <li class="px-4 flex-col hover:text-red-500 ">
+                                <a class="" routerLink="">HOME</a>
+                                <p class="w-1 mx-auto my-2 rounded-full text-center h-1 bg-orange-300 text-xl"></p>
+                            </li>
+                            <li class="px-4 flex-col group/item hover:text-red-400"><a routerLink="">TRIP</a>
+                                <p
+                                    class="group/edit invisible group-hover/item:visible w-1 mx-auto my-2 rounded-full text-center h-1 bg-orange-300">
+                                </p>
+                            </li>
+                            <li class="hover:text-red-400 px-4 flex-col group/item relative flex h-full justify-center">
+                                <a routerLink="/location">LOCATION</a>
+                                <p
+                                    class="group/edit invisible group-hover/item:visible w-1 mx-auto my-2 rounded-full text-center h-1 bg-orange-300">
+                                </p>
+                            </li>
+                            <li class="hover:text-red-400 px-4 flex-col group/item"><a routerLink="posts">POSTS</a>
+                                <p
+                                    class="group/edit invisible group-hover/item:visible w-1 mx-auto my-2 rounded-full text-center h-1 bg-orange-300">
+                                </p>
+                            </li>
+                            <li class="hover:text-red-400 px-4 flex-col group/item"><a
+                                    routerLink="/pagedetail">PAGE</a>
+                                <p
+                                    class="group/edit invisible group-hover/item:visible w-1 mx-auto my-2 rounded-full text-center h-1 bg-orange-300">
+                                </p>
+                            </li>
+                            <li class="hover:text-red-400 px-4 flex-col group/item"><a routerLink="/lienhe">CONTACT</a>
+                                <p
+                                    class="group/edit invisible group-hover/item:visible w-1 mx-auto my-2 rounded-full text-center h-1 bg-orange-300">
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Icon -->
+                    <div class="flex justify-center items-center pb-2 mt-2">
+                        <div class="m-3 hover:text-red-400">
+                            <span>0842755626</span>
+                            <i class="fas fa-phone-alt m-2"></i>
+                        </div>
+                        <button class="text-white rounded-xl w-20 py-1 bg-red-500 hover:bg-orange-500 m-1"
+                            routerLink="">Sign up</button>
+                        <button class="text-white rounded-xl w-20 py-1 bg-red-500 hover:bg-orange-500 m-1"
+                            routerLink="">Login</button>
+                    </div>
+                </div>
+                <!-- Banner -->
+
+            </header>
+        </div>
+        <img src="../../../assets/banner01.jpg" width="2100" alt="">
+
+        <!-- <div>
+            
+            <div class="slideshow-container z-[-1]">
+
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img class="w-full h-full" src="../../../assets/banner01.jpg"
+                        style="width:100%">
+
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img class="w-full h-full"
+                        src="../../../assets/banner01.jpg"
+                        style="width:100%">
+
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img class="w-full h-full" src="../../../assets/banner01.jpg" style="width:100%">
+
+                </div>
+
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+        </div> -->
+    </div>
+
+    <!-- Slideshow -->
+    <!-- <script>
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); 
+        }
+    </script> -->
+</body>
+
+
+</html>
