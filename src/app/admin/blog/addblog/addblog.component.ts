@@ -16,6 +16,8 @@ export class AddblogComponent {
     img: '', 
     dates: '', 
     content: '',
+    contentmain: '',
+
   };
   blogs!: Blog[];
 

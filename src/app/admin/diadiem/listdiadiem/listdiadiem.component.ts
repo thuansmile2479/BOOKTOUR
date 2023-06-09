@@ -38,19 +38,11 @@ export class ListdiadiemComponent {
 
   
   deleteProduct(id: number | string) {
-    const confirmation = confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');
-    if (confirmation) {
-      this.productService.deleteProduct(id).subscribe(() => {
-        const index = this.product.findIndex((item: any) => item._id === id);
-        if (index !== -1) {
-          this.product.splice(index, 1);
-          alert('Xóa sản phẩm thành công!');
-        this.router.navigateByUrl('/admin/locations')
-
-        }
-      });
-    }
-  }
+    this.productService.deleteProduct(id).subscribe(() => {
+      this.getProducts();
+      confirm('Bạn có chắc muốn xóa không');
+    });
+  } 
 
 
 }
