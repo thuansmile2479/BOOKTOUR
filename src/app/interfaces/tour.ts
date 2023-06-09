@@ -3,6 +3,7 @@ export interface Tour{
     name?: string,
     img?: string,
     nametour?: string,
+    price?: string,
     quantity?: number,
     address?: string,
 }

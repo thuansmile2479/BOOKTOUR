@@ -13,7 +13,7 @@ import { Route, Router } from '@angular/router';
 export class AdddiadiemComponent {
   product: IProduct = {
 
-    name: '',
+    name: '', 
     img: '',
     mess: '',
   };
@@ -28,7 +28,7 @@ export class AdddiadiemComponent {
         alert('ADD sản phẩm thành công!');
         this.route.navigateByUrl('/admin/locations')
       },
-      (error) => {
+      (error) => {  
         console.log('An error occurred while creating product:', error);
         // Xử lý lỗi nếu có
       }
