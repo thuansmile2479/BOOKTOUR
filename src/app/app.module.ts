@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -26,6 +27,8 @@ import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.co
 import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component';
 import { AddtourComponent } from './admin/tour/addtour/addtour.component';
 import { ListtourComponent } from './admin/tour/listtour/listtour.component';
+import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component';
+import { ListlienheComponent } from './admin/lienhe/listlienhe/listlienhe.component';
 
 
 
@@ -51,7 +54,12 @@ import { ListtourComponent } from './admin/tour/listtour/listtour.component';
     ListblogComponent,
     AddblogComponent, 
     EditblogComponent, 
-    ListdiadiemComponent, EditdiadiemComponent, AddtourComponent, ListtourComponent,
+    ListdiadiemComponent, 
+    EditdiadiemComponent, 
+    AddtourComponent, 
+    ListtourComponent,
+    AdddiadiemComponent, 
+    ListlienheComponent
 
   ],
 
