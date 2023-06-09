@@ -1,6 +1,7 @@
 import express from "express";
 import routerProduct from "./routes/product"; 
 import routerBlog from "./routes/blog";
+import routerTour from "./routes/tour";
 
 
 const app = express();
@@ -12,6 +13,8 @@ app.use(express.json());
 app.use(cors());
 app.use("/api", routerProduct);  
 app.use("/api", routerBlog);  
+app.use("/api",routerTour)
+
 
 
 // Connect to db
