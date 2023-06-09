@@ -105,3 +105,38 @@ export const addBlog = async function (req, res) {
         });
     }
 };
+
+export const updateBlog = async function (req, res) {
+    try {
+        const blog = await Blog.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,
+        });
+        if (!blog) {
+            return res.json({
+                message: "Cập nhật sản phẩm không thành công",
+            });
+        }
+        return res.json({
+            message: "Cập nhật sản phẩm thành công",
+            data: blog,
+        });
+    } catch (error) {
+        return res.status(400).json({
+            message: error,
+        });
+    }
+};
+export const deleteBlog = async function (req, res) {
+    try {
+        const blog = await Blog.findByIdAndDelete(req.params.id);
+
+        return res.json({
+            message: "Xóa sản phẩm thành công",
+            blog,
+        });
+    } catch (error) {
+        return res.status(400).json({
+            message: error,
+        });
+    }
+};
