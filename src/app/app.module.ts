@@ -20,12 +20,14 @@ import { LocantionComponent } from './pages/locantion/locantion.component';
 import { PagdetailComponent } from './pages/pagdetail/pagdetail.component';
 import { DetaillocantionComponent } from './pages/locantion/detaillocantion/detaillocantion.component';
 import { ListblogComponent } from './admin/blog/listblog/listblog.component';
-import { AddblogComponent } from './admin/blog/addblog/addblog.component'; 
+import { AddblogComponent } from './admin/blog/addblog/addblog.component';
 import { EditblogComponent } from './admin/blog/editblog/editblog.component';
 import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.component';
 import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component';
 import { AddtourComponent } from './admin/tour/addtour/addtour.component';
 import { ListtourComponent } from './admin/tour/listtour/listtour.component';
+import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component';
+import { EdittourComponent } from './admin/tour/edittour/edittour.component';
 
 
 
@@ -49,9 +51,9 @@ import { ListtourComponent } from './admin/tour/listtour/listtour.component';
     TourComponent,
     DetailtourComponent,
     ListblogComponent,
-    AddblogComponent, 
-    EditblogComponent, 
-    ListdiadiemComponent, EditdiadiemComponent, AddtourComponent, ListtourComponent,
+    AddblogComponent,
+    EditblogComponent,
+    ListdiadiemComponent,AdddiadiemComponent, EditdiadiemComponent, AddtourComponent, ListtourComponent, EdittourComponent,
 
   ],
 
