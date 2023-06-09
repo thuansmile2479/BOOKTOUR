@@ -15,12 +15,14 @@ import { ListblogComponent } from './admin/blog/listblog/listblog.component';
 import { AddblogComponent } from './admin/blog/addblog/addblog.component';
 import { EditblogComponent } from './admin/blog/editblog/editblog.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { EdittourComponent } from './admin/tour/edittour/edittour.component';
 import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.component';
 import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component';
 import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component';
 import { ListtourComponent } from './admin/tour/listtour/listtour.component';
 import { AddtourComponent } from './admin/tour/addtour/addtour.component';
 import { ListlienheComponent } from './admin/lienhe/listlienhe/listlienhe.component';
+
 
 
 const routes: Routes = [
@@ -30,7 +32,7 @@ const routes: Routes = [
       { path: '', component: HomeComponent },
       { path: 'pagedetail', component: PagdetailComponent },
       { path: 'posts', component: BlogComponent },
-      { path: 'lienhe', component: LienheComponent },  
+      { path: 'lienhe', component: LienheComponent },
       { path: 'location', component: LocantionComponent },
       { path: 'location/detail/:id', component: DetaillocantionComponent },
       { path: 'tour', component: TourComponent },
@@ -50,10 +52,12 @@ const routes: Routes = [
       
       { path: 'blog', component: ListblogComponent }, 
       { path: 'addblog', component: AddblogComponent },
-      { path: 'editblog/:id', component: EditblogComponent }, 
+      { path: 'editblog/:id', component: EditblogComponent },
 
+      { path: 'edittour/:id', component: EdittourComponent },
       { path: 'tour', component: ListtourComponent }, 
-      { path: 'addtour', component: AddtourComponent },  
+      { path: 'addtour', component: AddtourComponent }, 
+      
 
       { path: 'lienhe', component: ListlienheComponent }, 
 
