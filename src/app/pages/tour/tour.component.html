@@ -53,30 +53,30 @@
   <div class="my-2 w-11/12 mx-auto grid grid-cols-2 ">
 
 
-      <div class="max-w-[420px] max-h-[450px] border border-b-gray-400 bg-gray-100 rounded-xl my-2">
-          <a href="">
-              <img class="w-full max-h-[200px] rounded-t-xl" src="image/" alt="">
-          </a>
-          <div class="p-4">
-              <p class="text-sm text-slate-500 py-1"></p>
-              <a href="" class="hover:text-pink-800 py-1"></a>
-              <div class="flex">
-                  <div class="flex items-center">
-                      <i class="far fa-clock"></i>
-                      <p class="px-2"> ngày </p>
-                  </div>
-                  <div class="flex items-center">
-                      <i class="fas fa-star"></i>
-                      <p class="px-2">5 sao</p>
-                  </div>
-              </div>
-              <p>------------------------------------------</p>
-              <div class="flex py-1 items-center">
-                  <p class="text-sm text-slate-500 px-1">Giá</p>
-                  <p class="text-red-600"></p>
-              </div>
-          </div>
-      </div>
+    <div class="max-w-[420px] max-h-[400px] border border-b-gray-400 bg-gray-100 rounded-xl my-2" *ngFor="let tour of tours " routerLink="/tour/detail/{{tour._id}}">
+        <a href="">
+            <img class="w-full max-h-[200px] rounded-t-xl" [src]="tour.img" alt="">
+        </a>
+        <div class="p-4">
+            <p class="text-sm text-slate-500 py-1">{{ tour.name }}</p>
+            <a href="" class="hover:text-pink-800 py-1">{{ tour.nametour }}</a>
+            <div class="flex">
+                <div class="flex items-center">
+                    <i class="far fa-clock"></i>
+                    <p class="px-2">2 ngày </p>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-star"></i>
+                    <p class="px-2">5 sao</p>
+                </div>
+            </div>
+            <p>------------------------------------------</p>
+            <div class="flex py-1 items-center">
+                <p class="text-sm text-slate-500 px-1">Giá</p>
+                <p class="text-red-600">{{ tour.price }}</p>
+            </div>
+        </div>
+    </div>
 
 
   </div>
