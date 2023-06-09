@@ -17,6 +17,7 @@ export class EditblogComponent {
     img: [''],
     dates: [''], 
     content: [''],
+    contentmain: [''],
   })
 
 
@@ -35,6 +36,7 @@ export class EditblogComponent {
           img: blog.img,
           dates: blog.dates, 
           content: blog.content,
+          contentmain: blog.contentmain,
         })
       })
     })
@@ -50,6 +52,7 @@ export class EditblogComponent {
         img: this.blogForm.value.img || "",
         dates: this.blogForm.value.dates || "", 
         content: this.blogForm.value.content || "",
+        contentmain: this.blogForm.value.contentmain || "",
       }
       this.blogService.updateBlog(blog).subscribe(data => {
         alert("Update blog successfully.")

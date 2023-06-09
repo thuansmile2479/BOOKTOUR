@@ -4,4 +4,6 @@ export interface Blog{
     img?: string,
     dates?: string, 
     content?: string,
+    contentmain?: string,
+
 }

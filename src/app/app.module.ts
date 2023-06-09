@@ -24,6 +24,8 @@ import { AddblogComponent } from './admin/blog/addblog/addblog.component';
 import { EditblogComponent } from './admin/blog/editblog/editblog.component';
 import { ListdiadiemComponent } from './admin/diadiem/listdiadiem/listdiadiem.component';
 import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.component';
+import { AddtourComponent } from './admin/tour/addtour/addtour.component';
+import { ListtourComponent } from './admin/tour/listtour/listtour.component';
 
 
 
@@ -49,7 +51,7 @@ import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.co
     ListblogComponent,
     AddblogComponent, 
     EditblogComponent, 
-    ListdiadiemComponent, EditdiadiemComponent,
+    ListdiadiemComponent, EditdiadiemComponent, AddtourComponent, ListtourComponent,
 
   ],
 

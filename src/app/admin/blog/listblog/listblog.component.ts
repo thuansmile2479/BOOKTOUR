@@ -25,8 +25,7 @@ export class ListblogComponent {
       (error) => {
         console.log(error);
       }
-    );
-    console.log("heeeee");
+    ); 
 
   }
 
@@ -35,21 +34,12 @@ export class ListblogComponent {
   }
 
 
-
   deleteBlog(id: number | string) {
-    const confirmation = confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');
-    if (confirmation) {
-      this.blogService.deleteBlog(id).subscribe(() => {
-        const index = this.blog.findIndex((item: any) => item._id === id);
-        if (index !== -1) {
-          this.blog.splice(index, 1);
-          alert('Xóa sản phẩm thành công!');
-        this.router.navigateByUrl('/admin/blog')
-
-        }
-      });
-    }
-  }
+    this.blogService.deleteBlog(id).subscribe(() => {
+      this.getBlogs();
+      confirm('Bạn có chắc muốn xóa không');
+    });
+  } 
 
 
 }
