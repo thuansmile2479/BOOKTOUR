@@ -1,160 +1,95 @@
-<div class="block w-full  text-xl">
-  <img class="w-full max-h-[500px]" src="banner" alt="">
-  <div>
-  <form action="" method="post">
-              <div class="flex justify-center my-3 ">
-                  <div class="border border-gray-300 rounded-md mx-2">
-                      <div class="flex mx-4 my-2">
-                          <i class="fa-regular fa-paper-plane text-xl my-1 mx-2"></i>
-                          <p class="font-medium text-xl">Địa điểm</p>
-                          <select name="kyw_dd" id="">
-                              <option value="">- Tất cả -</option>
-
-                          </select>
-                      </div>
-                  </div>
-                  <div class="border border-gray-300 rounded-md mx-2">
-                      <div class="flex mx-4 my-2">
-                          <i class="fa-regular fa-flag text-xl my-1 mx-2"></i>
-                          <p class="font-medium text-xl">Thể loại</p>
-                          <select name="kyw_tl" id="">
-                              <option value="">- Tất cả -</option>
-
-                          </select>
-                      </div>
-                  </div>
-                  <div class="border border-gray-300 rounded-md mx-2">
-                      <div class="flex mx-4 my-2">
-                          <i class="fa-regular fa-calendar-days text-xl my-1 mx-2"></i>
-                          <p class="font-medium text-xl">Số ngày đi</p>
-                          <select name="kyw_n" id="">
-                              <option value="">- Tất cả -</option>
-                              <option value="1">1 Ngày</option>
-                              <option value="2">2 Ngày</option>
-                              <option value="3">3 Ngày</option>
-                          </select>
-                      </div>
-                  </div>
-                  <div class="border border-gray-300 rounded-md mx-2 bg-orange-400 hover:bg-blue-600">
-                      <div class="mx-4 my-2">
-                          <button type="submit" name="submit">
-                              <p class="font-medium text-2xl">Tìm kiếm</p>
-                          </button>
-                      </div>
-                  </div>
-              </div>
-              </form>
-  </div>
-</div>
-
 <!-- content -->
 <div class="w-11/12 mx-auto grid grid-cols-[70%_30%] my-2">
-  <div class="px-10">
-      <h1 class="text-2xl">ok</h1>
-      <div class="flex">
-          <div class="border-dotted px-10 border-r-2">
-              <p class="text-gray-300">Giá</p>
-              <p class="text-red-700 font-medium ">ok</p>
-          </div>
-          <div class="border-dotted px-10 border-r-2">
-              <p class="text-gray-300">Ngày </p>
-              <p class="">pk  ngày</p>
-          </div>
-          <div class="border-dotted px-10 border-r-2">
-              <p class="text-gray-300">Còn vé</p>
-              <p class="">ok</p>
-          </div>
-          <div class="border-dotted px-10 ">
-              <p class="text-gray-300">Loại tour</p>
-              <a class="hover:text-red-600" href="#"></a>
-          </div>
-      </div>
-      <!--Ảnh tour -->
-      <div class="py-10 max-w-[870px] max-h-[600px]">
-          <img class="mySlides3 w-full max-h-[300px]" src="">
-      </div>
+    <div class="px-10" *ngIf="tour">
+        <div class="flex">
 
-      <div class="flex py-8 w-full">
-          <!-- Kế Hoạch Chuyến Đi -->
-          <div class="border-dotted hover:bg-orange-500 border-2 h-8 w-1/4">
-              <a href="" class="px-8 " id="kehoach">Kế Hoạch Chuyến Đi</a>
-          </div>
-          <!-- Nhận Xét, Đánh Giá -->
-          <div class="border-dotted hover:bg-orange-500 border-2 h-8 w-1/4">
-              <a href="" class="px-8" id="danhgia">Nhận Xét, Đánh Giá</a>
-          </div>
-      </div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        </div>
+        <!--Ảnh tour -->
+        <div class="py-10 max-w-[870px] max-h-[600px]">
+            <img class="mySlides3 w-full max-h-[300px]" [src]="tour.img">
+        </div>
 
-      <div class="w-11/12" id="content"></div>
-      <!-- Bạn cũng có thể thích -->
-      <div class="w-full grid grid-cols-2 py-10">
+        <div class="flex py-8 w-full">
+            <!-- Kế Hoạch Chuyến Đi -->
+            <div class="border-dotted hover:bg-orange-500 border-2 h-8 w-1/4">
+                <a href="" class="px-8 " id="kehoach">Kế Hoạch Chuyến Đi</a>
+            </div>
+            <!-- Nhận Xét, Đánh Giá -->
+            <div class="border-dotted hover:bg-orange-500 border-2 h-8 w-1/4">
+                <a href="" class="px-8" id="danhgia">Nhận Xét, Đánh Giá</a>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-          <div class="max-w-[420px] max-h-[450px] border border-b-gray-400 bg-gray-100 rounded-xl">
-              <a href="">
-                  <img class="w-full max-h-[300px] rounded-t-xl" src="" alt="">
-              </a>
-              <div class="p-4">
-                  <p class="text-sm text-slate-500 py-1">ok</p>
-                  <a href="" class="hover:text-pink-800 py-1">ok</a>
-                  <div class="flex">
-                      <div class="flex items-center">
+        <div class="w-11/12" id="content"></div>
+        <!-- Bạn cũng có thể thích -->
+        <div class="w-full grid grid-cols-2 py-10">
+
+            <div class="max-w-[420px] max-h-[450px] border border-b-gray-400 bg-gray-100 rounded-xl">
+                <a href="">
+                    <img class="w-full max-h-[300px] rounded-t-xl" src="" alt="">
+                </a>
+                <div class="p-4">
+                    <p class="text-sm text-slate-500 py-1">{{ tour.name }}</p>
+                    <a href="" class="hover:text-pink-800 py-1">{{ tour.nametour }}</a>
+                    <div class="flex">
+                        <!-- <div class="flex items-center">
                           <i class="far fa-clock"></i>
                           <p class="px-2">ok</p>
-                      </div>
-                      <div class="flex items-center">
-                          <i class="fas fa-star"></i>
-                          <p class="px-2">5 sao</p>
-                      </div>
-                  </div>
-                  <p>------------------------------------------</p>
-                  <div class="flex py-1 items-center">
-                      <p class="text-sm text-slate-500 px-1">Giá</p>
-                      <p class="text-red-600">ok</p>
-                  </div>
-              </div>
-          </div>
+                      </div> -->
+                        <div class="flex items-center">
+                            <i class="fas fa-star"></i>
+                            <p class="px-2">5 sao</p>
+                        </div>
+                    </div>
+                    <p>------------------------------------------</p>
+                    <div class="flex py-1 items-center">
+                        <p class="text-sm text-slate-500 px-1">Giá</p>
+                        <p class="text-red-600">{{ tour.price }}</p>
+                    </div>
+                </div>
+            </div>
 
-      </div>
-  </div>
-  <!-- Đặt Lịch Tour -->
-  <div class="border-dotted border h-[400px] rounded-xl">
-      <h1 class="py-4 text-2xl mx-6">Đặt chuyến đi</h1>
-      <form action="" method="post">
-      <div class="pb-6 w-3/4 mx-auto">
-          <p>Thời Gian Đi</p>
-          <input class="border p-3" class="border w-44 h-10" type="date" name="date">
-      </div>
-      <div class="w-3/4 mx-auto py-4 border bg-gray-100 flex justify-center ">
-          <p class="px-2">Time</p>
-          <div class="px-2">
-              <input type="radio" name="time" value="12:00" id="">12:00
-              <input type="radio" name="time" value="17:00" id="">17:00
-          </div>
+        </div>
+    </div>
+    <!-- Đặt Lịch Tour -->
+    <div class="border-dotted border h-[400px] rounded-xl">
+        <h1 class="py-4 text-2xl mx-6">Đặt chuyến đi</h1>
+        <form action="" method="post">
+            <div class="pb-6 w-3/4 mx-auto">
+                <p>Thời Gian Đi</p>
+                <input class="border p-3" class="border w-44 h-10" type="date" name="date">
+            </div>
+            <div class="w-3/4 mx-auto py-4 border bg-gray-100 flex justify-center ">
+                <p class="px-2">Time</p>
+                <div class="px-2">
+                    <input type="radio" name="time" value="12:00" id="">12:00
+                    <input type="radio" name="time" value="17:00" id="">17:00
+                </div>
 
-      </div>
-      <div class="py-4 border-dotted border-b-2 w-3/4 mx-auto">
-          <div class="flex items-center">
-              <div class="flex">
-                  <p class="text-gray-600 font-medium text-lg">Số Người Lớn:</p>
-              </div>
-              <input class="border border-gray-300 w-12 h-6" name="soLuong" min="0" type="number" placeholder="0">
-          </div>
-          <div class="flex items-center my-2">
-              <div class="flex">
-                  <p class="text-gray-600 font-medium text-lg">Số Trẻ em <5-13 tuổi>:</p>
-              </div>
-              <input class="border border-gray-300 w-12 h-6" name="treEm" min="0" type="number" placeholder="0">
-          </div>
-      </div>
-      <div class="w-3/4 mx-auto my-3 border text-2xl font-medium text-white text-center bg-red-600 py-3 ">
+            </div>
+            <div class="py-4 border-dotted border-b-2 w-3/4 mx-auto">
+                <div class="flex items-center">
+                    <div class="flex">
+                        <p class="text-gray-600 font-medium text-lg">Số Người Lớn:</p>
+                    </div>
+                    <input class="border border-gray-300 w-12 h-6" name="soLuong" min="0" type="number" placeholder="0">
+                </div>
+                <div class="flex items-center my-2">
+                    <div class="flex">
+                        <p class="text-gray-600 font-medium text-lg">Số Trẻ em <5-13 tuổi>:</p>
+                    </div>
+                    <input class="border border-gray-300 w-12 h-6" name="treEm" min="0" type="number" placeholder="0">
+                </div>
+            </div>
+            <div class="w-3/4 mx-auto my-3 border text-2xl font-medium text-white text-center bg-red-600 py-3 ">
 
-          <button name="datTour" type="submit" >Đặt Tour</button>
+                <button name="datTour" type="submit">Đặt Tour</button>
 
-      </div>
-      <input type="hidden" name="name_tour" value="">
-      <input type="hidden" name="id_tour" value="">
-      <input type="hidden" name="price" value="">
-      </form>
-  </div>
+            </div>
+            <input type="hidden" name="name_tour" value="">
+            <input type="hidden" name="id_tour" value="">
+            <input type="hidden" name="price" value="">
+        </form>
+    </div>
 </div>

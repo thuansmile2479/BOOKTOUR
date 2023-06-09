@@ -13,29 +13,29 @@
             <p class="font-medium text-5xl">Blog</p>
         </div>
     </div>
-    <div class="mt-20 w-10/12 mx-auto grid grid-cols-[70%_30%]">
-        <div class="">
-            <div class="ml-32">
+    <div class="mt-20 w-10/12 mx-auto flex ">
+        <div class="left-0 w-[70%]">
+            <div class="col-span-2 inset-y-0  " *ngFor="let blog of blogs">
                 <div class="ml-10">
-                    <img class="rounded-md " alt="">
+                    <img class=" rounded-md" [src]="blog.img" alt="">
                 </div>
                 <div class="mt-8  ">
                     <a href="">
-                        <p class="font-medium text-2xl"></p>
+                        <p class="font-medium text-2xl">{{ blog.name }}</p>
                     </a>
                     <div class="mt-8 ">
-                        <p></p>
+                        <p>{{ blog.content }}</p>
                     </div>
                     <div class="mt-6 mb-8 ">
                         <a href="">
                             <p class="font-medium text-lg">Đọc Tiếp ... </p>
                         </a>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
-        <div class="px-5">
+        <div class="px-5 inset-y-0 right-0 w-[30%]">
             <div class="ml-10">
                 <div>
                     <form action="" id="search-box">
@@ -145,5 +145,5 @@
     </div>
 
 
-   
+
 </div>
