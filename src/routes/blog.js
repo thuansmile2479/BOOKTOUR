@@ -11,6 +11,7 @@ import { checkPermission } from "../middlewares/checkPermission.js";
 const router = express.Router(); 
 router.get("/blogs", getAllBlogs);
 router.get("/blogs/:id", getBlogId);
+router.post("/blogs", addBlog);
 
 
 export default router;

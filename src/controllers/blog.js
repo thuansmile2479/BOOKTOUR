@@ -74,3 +74,34 @@ export const getBlogId = async function (req, res) {
         });
     }
 };
+export const addBlog = async function (req, res) {
+    try {
+        const { error } = blogSchema.validate(req.body);
+        if (error) {
+            return res.status(400).json({
+                message: error.details[0].message,
+            });
+        }
+        // const { data: blog } = await axios.post(`${API_URI}/blogs`, req.body);
+        //   const blogs = await response.json();
+        const blog = await Blog.create(req.body);
+        if (!blog) {
+            return res.json({
+                message: "Không thêm được sản phẩm",
+            });
+        }
+        await Category.findByIdAndUpdate(blog.categoryId, {
+            $addToSet: {
+                blogs: blog._id,
+            },
+        });
+        return res.json({
+            message: "Thêm thành công",
+            data: blog,
+        });
+    } catch (error) {
+        return res.status(400).json({
+            message: error,
+        });
+    }
+};
