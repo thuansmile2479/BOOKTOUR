@@ -56,3 +56,39 @@ export const getAllTours = async (req, res) => {
         });
     }
 };
+
+
+export const updateTour = async function (req, res) {
+    try {
+        const tour = await Tour.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,
+        });
+        if (!tour) {
+            return res.json({
+                message: "Cập nhật sản phẩm không thành công",
+            });
+        }
+        return res.json({
+            message: "Cập nhật sản phẩm thành công",
+            data: tour,
+        });
+    } catch (error) {
+        return res.status(400).json({
+            message: error,
+        });
+    }
+};
+export const deleteTour = async function (req, res) {
+    try {
+        const tour = await Tour.findByIdAndDelete(req.params.id);
+
+        return res.json({
+            message: "Xóa sản phẩm thành công",
+            tour,
+        });
+    } catch (error) {
+        return res.status(400).json({
+            message: error,
+        });
+    }
+};
