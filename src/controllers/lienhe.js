@@ -91,6 +91,13 @@ export const deleteLienhe = async function (req, res) {
             message: "Xóa sản phẩm thành công",
             lienhe,
         });
+    } catch (error) {
+        return res.status(400).json({
+            message: error,
+        });
+    }
+};
+
       
 export const getAllLienhes = async (req, res) => {
     const {
