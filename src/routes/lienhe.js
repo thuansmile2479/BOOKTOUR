@@ -5,12 +5,12 @@ import {
   deleteLienhe, 
   getLienheId,
   updateLienhe, 
-
+  getAllLienhes
 } from "../controllers/lienhe.js";
 import { checkPermission } from "../middlewares/checkPermission.js";
 const router = express.Router();  
 
-
+router.get("/lienhes", getAllLienhes);
 router.get("/lienhes/:id", getLienheId);
 router.post("/lienhes", addLienhe);  
 router.patch("/lienhes/:id", updateLienhe);

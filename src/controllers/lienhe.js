@@ -15,8 +15,7 @@ const lienheSchema = joi.object({
 
 
 export const getLienheId = async function (req, res) {
-    // const id = req.params.id;
-    // const { data: lienhe } = await axios.get(` ${API_URI}/lienhes/${id}`);
+
     try {
         const lienhe = await Lienhe.findById(req.params.id).populate(
             "categoryId"
@@ -41,8 +40,6 @@ export const addLienhe = async function (req, res) {
                 message: error.details[0].message,
             });
         }
-        // const { data: lienhe } = await axios.post(`${API_URI}/lienhes`, req.body);
-        //   const lienhes = await response.json();
         const lienhe = await Lienhe.create(req.body);
         if (!lienhe) {
             return res.json({
@@ -94,6 +91,40 @@ export const deleteLienhe = async function (req, res) {
             message: "Xóa sản phẩm thành công",
             lienhe,
         });
+      
+export const getAllLienhes = async (req, res) => {
+    const {
+        _sort = "createAt",
+        _order = "_asc",
+        _limit = 30,
+        _page = 1,
+        _keywords,
+    } = req.query;
+
+    const options = {
+        page: _page,
+        limit: _limit,
+        sort: { [_sort]: _order === "desc" ? -1 : 1 },
+    };
+
+    try {
+        const searchData = (lienhes) => {
+            return lienhes?.docs?.filter((item) =>
+                item.name.toLowerCase().includes(_keywords)
+            );
+        };
+
+        const lienhe = await Lienhe.paginate({}, options); 
+        
+        if (lienhe.length === 0) {
+            return res.json({
+                message: "Không có sản phẩm nào",
+            });
+        } else {
+            const searchDataLienhe= await searchData(lienhe);
+            const lienhesRespone = await { ...lienhe, docs: searchDataLienhe };
+            return res.status(200).json(lienhe);
+        }
     } catch (error) {
         return res.status(400).json({
             message: error,
