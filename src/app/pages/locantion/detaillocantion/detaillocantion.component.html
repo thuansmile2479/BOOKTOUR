@@ -2,18 +2,21 @@
   <div class="text-center pt-20 ">
       <p class="font-medium text-4xl "> </p>
   </div>
-  <div class="w-10/12 mx-auto grid grid-cols-[75%_25%] mt-20">
+  <div class="w-10/12 mx-auto grid grid-cols-[75%_25%] mt-20" *ngIf="product">
       <div>
           <p class="font-medium text-3xl">Chi Tiết Điểm Đến</p>
           <div class="mt-6">
-              <p></p>
+              <p>{{ product.name }}</p>
           </div>
+          <div class="mt-6">
+            <p>{{ product.mess }}</p>
+        </div>
           <div class="w-full flex mt-10">
-              <div class="w-1/2">
-                  <img class="max-w-[300px] max-h-[200px] p-2" src=" " alt="">
+              <div class="w-[500px]">
+                  <img class="max-w-[450px] max-h-[200px] p-2"  [src]="product.img" alt="">
               </div>
               <div class="w-1/2 p-2">
-                  <p>  </p>
+                  <p> {{ product.messmain }} </p>
               </div>
           </div>
       </div>
@@ -22,13 +25,13 @@
           <div>
               <div class="flex mt-7">
                   <div class="w-2/6 h-2/6 mx-2">
-                     <img class="w-full h-full rounded-md" src="" alt="">
+                     <img class="w-full h-full rounded-md" [src]="product.img" alt="">
                   </div>
                   <div class="w-2/6 h-2/6 mx-2">
-                      <img class="w-full h-full rounded-md" src="" alt="">
+                      <img class="w-full h-full rounded-md" [src]="product.img" alt="">
                    </div>
                    <div class="w-2/6 h-2/6 mx-2">
-                      <img class="w-full h-full rounded-md" src="" alt="">
+                      <img class="w-full h-full rounded-md" [src]="product.img" alt="">
                    </div>
 
               </div>
