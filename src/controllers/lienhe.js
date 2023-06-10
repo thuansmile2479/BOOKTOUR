@@ -1,0 +1,66 @@
+import axios from "axios"; 
+
+import dotenv from "dotenv";
+import joi from "joi";
+import Lienhe from "../models/lienhe.js";
+import Category from "../models/category.js";
+dotenv.config();
+const { API_URI } = process.env;
+const lienheSchema = joi.object({
+    name: joi.string().required(),
+    email: joi.string().required(),
+    phone: joi.string().required(),
+    mess: joi.string().required(), 
+});
+
+
+export const getLienheId = async function (req, res) {
+    // const id = req.params.id;
+    // const { data: lienhe } = await axios.get(` ${API_URI}/lienhes/${id}`);
+    try {
+        const lienhe = await Lienhe.findById(req.params.id).populate(
+            "categoryId"
+        );
+        if (lienhe.length === 0) {
+            return res.json({
+                message: "Không có sản phẩm nào",
+            });
+        }
+        return res.json(lienhe);
+    } catch (error) {
+        return res.status(400).json({
+            message: error,
+        });
+    }
+};
+export const addLienhe = async function (req, res) {
+    try {
+        const { error } = lienheSchema.validate(req.body);
+        if (error) {
+            return res.status(400).json({
+                message: error.details[0].message,
+            });
+        }
+        // const { data: lienhe } = await axios.post(`${API_URI}/lienhes`, req.body);
+        //   const lienhes = await response.json();
+        const lienhe = await Lienhe.create(req.body);
+        if (!lienhe) {
+            return res.json({
+                message: "Không thêm được sản phẩm",
+            });
+        }
+        await Category.findByIdAndUpdate(lienhe.categoryId, {
+            $addToSet: {
+                lienhes: lienhe._id,
+            },
+        });
+        return res.json({
+            message: "Thêm thành công",
+            data: lienhe,
+        });
+    } catch (error) {
+        return res.status(400).json({
+            message: error,
+        });
+    }
+};
