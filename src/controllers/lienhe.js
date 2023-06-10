@@ -15,8 +15,7 @@ const lienheSchema = joi.object({
 
 
 export const getLienheId = async function (req, res) {
-    // const id = req.params.id;
-    // const { data: lienhe } = await axios.get(` ${API_URI}/lienhes/${id}`);
+
     try {
         const lienhe = await Lienhe.findById(req.params.id).populate(
             "categoryId"
@@ -41,8 +40,6 @@ export const addLienhe = async function (req, res) {
                 message: error.details[0].message,
             });
         }
-        // const { data: lienhe } = await axios.post(`${API_URI}/lienhes`, req.body);
-        //   const lienhes = await response.json();
         const lienhe = await Lienhe.create(req.body);
         if (!lienhe) {
             return res.json({
