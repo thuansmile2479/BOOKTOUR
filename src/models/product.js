@@ -13,6 +13,9 @@ const productSchema = new mongoose.Schema(
     mess: {
       type: String,
     },
+    messmain: {
+      type: String,
+    },
 
     categoryId: {
       type: mongoose.Types.ObjectId,

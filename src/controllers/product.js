@@ -10,6 +10,7 @@ const productSchema = joi.object({
   name: joi.string().required(), 
   img: joi.string().required(),
   mess: joi.string(),
+  messmain: joi.string(),
   categoryId: joi.string(),
 });
 export const getAllProducts = async (req, res) => {
