@@ -14,7 +14,8 @@ export class EditdiadiemComponent {
   productForm = this.formBuilder.group({
     name: [''],
     img: [''],
-    mess: [""]
+    mess: [""],
+    messmain: [""],
   })
 
 
@@ -31,6 +32,7 @@ export class EditdiadiemComponent {
         this.productForm.patchValue({
           name: product.name,
           mess: product.mess,
+          messmain: product.messmain,
           img: product.img,
         })
       })
@@ -45,6 +47,7 @@ export class EditdiadiemComponent {
         _id: this.product._id,
         name: this.productForm.value.name || "",
         mess: this.productForm.value.mess || "",
+        messmain: this.productForm.value.messmain || "",
         img: this.productForm.value.img || "",
       }
       this.productService.updateProduct(product).subscribe(data => {

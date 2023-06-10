@@ -66,6 +66,8 @@ import { ListlienheComponent } from './admin/lienhe/listlienhe/listlienhe.compon
     ListtourComponent,
     EdittourComponent,
 
+    ListlienheComponent
+
 
   ],
 
