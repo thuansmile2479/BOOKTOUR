@@ -64,3 +64,43 @@ export const addLienhe = async function (req, res) {
         });
     }
 };
+
+export const getAllLienhes = async (req, res) => {
+    const {
+        _sort = "createAt",
+        _order = "_asc",
+        _limit = 30,
+        _page = 1,
+        _keywords,
+    } = req.query;
+
+    const options = {
+        page: _page,
+        limit: _limit,
+        sort: { [_sort]: _order === "desc" ? -1 : 1 },
+    };
+
+    try {
+        const searchData = (lienhes) => {
+            return lienhes?.docs?.filter((item) =>
+                item.name.toLowerCase().includes(_keywords)
+            );
+        };
+
+        const lienhe = await Lienhe.paginate({}, options); 
+        
+        if (lienhe.length === 0) {
+            return res.json({
+                message: "Không có sản phẩm nào",
+            });
+        } else {
+            const searchDataLienhe= await searchData(lienhe);
+            const lienhesRespone = await { ...lienhe, docs: searchDataLienhe };
+            return res.status(200).json(lienhe);
+        }
+    } catch (error) {
+        return res.status(400).json({
+            message: error,
+        });
+    }
+};
