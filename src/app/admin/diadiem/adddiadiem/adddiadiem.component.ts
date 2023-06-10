@@ -16,6 +16,8 @@ export class AdddiadiemComponent {
     name: '', 
     img: '',
     mess: '',
+    messmain: '',
+
   };
   products!: IProduct[];
 

@@ -3,4 +3,5 @@ export interface IProduct{
     name?: string,
     img?: string,
     mess?: string,
+    messmain?: string,
 }

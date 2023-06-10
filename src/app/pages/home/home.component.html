@@ -26,19 +26,19 @@
         </section>
 
         <section>
-            <div class="flex justify-center mb-24">
-                <div class="relative px-4">
-                    <div class="w-72 h-96 relative">
-                        <img class="w-full h-full rounded-md" src="../../../assets/hoian2.jpg" alt="">
+            <div class="flex justify-center mb-5">
+                <div class="relative px-4 grid gap-1 grid-cols-6 grid-rows-1">
+                    <div class="w-72 h-96 relative m-3" *ngFor="let tour of tours "   >
+                        <img class="w-full h-full rounded-md"  [src]="tour.img" alt="">
                         <div class="flex absolute top-5 right-5 text-white   ">
-                            <p class="font-medium">From</p>
-                            <p class="font-medium text-lg mx-1">$150</p>
+                            <p class="font-medium"></p>
+                            <p class="font-medium text-lg mx-1">{{ tour.price }}</p>
                         </div>
                         <div class="absolute bottom-52 left-6 text-gray-300">
-                            <p class="font-normal text-base ">Hội An - Việt Nam</p>
+                            <p class="font-normal text-base ">{{ tour.name }}</p>
                         </div>
                         <div class="absolute bottom-36 left-6 text-white">
-                            <p class="font-normal text-2xl ">THAM QUAN PHỐ CỔ ĐÈN LỒNG</p>
+                            <p class="font-normal text-2xl ">{{ tour.nametour }}</p>
                         </div>
                         <div class="absolute bottom-24 left-6 text-white flex  ">
 
@@ -59,7 +59,7 @@
                         </div>
                         <div
                             class="absolute bottom-5 left-8 border border-white text-white rounded-sm hover:bg-orange-500  ">
-                            <a href="">
+                            <a routerLink="/tour/detail/{{tour._id}}">
                                 <p class="font-medium text-lg px-10 py-3">Tìm Hiểu Thêm</p>
                             </a>
                         </div>
@@ -68,130 +68,6 @@
 
                 </div>
 
-                <div class="relative px-4">
-                    <div class="w-72 h-96 relative">
-                        <img class="w-full h-full rounded-md" src="../../../assets/phuquoc.jpg" alt="">
-                        <div class="flex absolute top-5 right-5 text-white   ">
-                            <p class="font-medium">From</p>
-                            <p class="font-medium text-lg mx-1">$200</p>
-                        </div>
-                        <div class="absolute bottom-52 left-6 text-gray-300">
-                            <p class="font-normal text-base ">Phú Quốc - Việt Nam</p>
-                        </div>
-                        <div class="absolute bottom-36 left-6 text-white">
-                            <p class="font-normal text-2xl ">TẬN HƯỞNG BỜ BIỂN DÀI BẤT TẬN</p>
-                        </div>
-                        <div class="absolute bottom-24 left-6 text-white flex  ">
-
-                            <i class="fa-regular fa-clock text-base py-1 "></i>
-                            <div class="">
-                                <p class="font-normal text-base px-2  ">6 Days</p>
-                            </div>
-                            <div class="flex mx-2 my-1 ">
-                                <i class="fa-regular fa-star px-1 text-yellow-400"></i>
-                                <i class="fa-regular fa-star text-yellow-400 "></i>
-                                <i class="fa-regular fa-star px-1 text-yellow-400"></i>
-                                <i class="fa-regular fa-star text-yellow-400   "></i>
-                                <i class="fa-regular fa-star px-1 text-yellow-400"></i>
-                            </div>
-                            <div class="">
-                                <p>5/5</p>
-                            </div>
-                        </div>
-                        <div
-                            class="absolute bottom-5 left-8 border border-white text-white rounded-sm hover:bg-orange-500  ">
-                            <a href="">
-                                <p class="font-medium text-lg px-10 py-3">Tìm Hiểu Thêm</p>
-                            </a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="relative px-4">
-                    <div class="w-72 h-96 relative">
-                        <img class="w-full h-full rounded-md" src="../../../assets/hue.jpg" alt="">
-                        <div class="flex absolute top-5 right-5 text-white   ">
-                            <p class="font-medium">From</p>
-                            <p class="font-medium text-lg mx-1">$180</p>
-                        </div>
-                        <div class="absolute bottom-52 left-6 text-gray-300">
-                            <p class="font-normal text-base ">Huế - Việt Nam</p>
-                        </div>
-                        <div class="absolute bottom-36 left-6 text-white">
-                            <p class="font-normal text-2xl "> CÔNG TRÌNH KIẾN TRÚC CỔ KÍNH </p>
-                        </div>
-                        <div class="absolute bottom-24 left-6 text-white flex  ">
-
-                            <i class="fa-regular fa-clock text-base py-1 "></i>
-                            <div class="">
-                                <p class="font-normal text-base px-2  ">5 Days</p>
-                            </div>
-                            <div class="flex mx-2 my-1 ">
-                                <i class="fa-regular fa-star px-1 text-yellow-400"></i>
-                                <i class="fa-regular fa-star text-yellow-400 "></i>
-                                <i class="fa-regular fa-star px-1 text-yellow-400"></i>
-                                <i class="fa-regular fa-star text-yellow-400   "></i>
-                                <i class="fa-regular fa-star px-1 text-yellow-400"></i>
-                            </div>
-                            <div class="">
-                                <p>4.6/5</p>
-                            </div>
-                        </div>
-                        <div
-                            class="absolute bottom-5 left-8 border border-white text-white rounded-sm hover:bg-orange-500  ">
-                            <a href="">
-                                <p class="font-medium text-lg px-10 py-3">Tìm Hiểu Thêm</p>
-                            </a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="relative px-4">
-                    <div class="w-72 h-96 relative">
-                        <img class="w-full h-full rounded-md" src="../../../assets/hagiang3.jpg" alt="">
-                        <div class="flex absolute top-5 right-5 text-white   ">
-                            <p class="font-medium">From</p>
-                            <p class="font-medium text-lg mx-1">$160</p>
-                        </div>
-                        <div class="absolute bottom-52 left-6 text-gray-300">
-                            <p class="font-normal text-base ">Hà Giang - Việt Nam</p>
-                        </div>
-                        <div class="absolute bottom-36 left-6 text-white">
-                            <p class="font-normal text-2xl ">ĐỒI NÚI HÙNG VĨ BAO LA </p>
-                        </div>
-                        <div class="absolute bottom-24 left-6 text-white flex  ">
-
-                            <i class="fa-regular fa-clock text-base py-1 "></i>
-                            <div class="">
-                                <p class="font-normal text-base px-2  ">3 Days</p>
-                            </div>
-                            <div class="flex mx-2 my-1 ">
-                                <i class="fa-regular fa-star px-1 text-yellow-400"></i>
-                                <i class="fa-regular fa-star text-yellow-400 "></i>
-
-                                <i class="fa-regular fa-star text-yellow-400   "></i>
-                                <i class="fa-regular fa-star px-1 text-yellow-400"></i>
-                            </div>
-                            <div class="">
-                                <p>4.6/5</p>
-                            </div>
-                        </div>
-                        <div
-                            class="absolute bottom-5 left-8 border border-white text-white rounded-sm hover:bg-orange-500  ">
-                            <a href="">
-                                <p class="font-medium text-lg px-10 py-3">Tìm Hiểu Thêm</p>
-                            </a>
-                        </div>
-
-                    </div>
-
-                </div>
             </div>
         </section>
 
