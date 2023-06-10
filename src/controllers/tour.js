@@ -57,7 +57,6 @@ export const getAllTours = async (req, res) => {
     }
 };
 
-
 export const updateTour = async function (req, res) {
     try {
         const tour = await Tour.findByIdAndUpdate(req.params.id, req.body, {
@@ -92,3 +91,52 @@ export const deleteTour = async function (req, res) {
         });
     }
 };
+
+export const getToursId = async function (req, res) {
+    try {
+      const tour = await Tour.findById(req.params.id).populate(
+        "categoryId"
+      );
+      if (tour.length === 0) {
+        return res.json({
+          message: "Không có tours nào",
+        });
+      }
+      return res.json(tour);
+    } catch (error) {
+      return res.status(400).json({
+        message: error,
+      });
+    }
+  };
+
+  export const addTour = async function (req, res) {
+    try {
+      const { error } = tourSchema.validate(req.body);
+      if (error) {
+        return res.status(400).json({
+          message: error.details[0].message,
+        });
+      }
+      const tour = await Tour.create(req.body);
+      if (!tour) {
+        return res.json({
+          message: "Không thêm được địa điểm",
+        });
+      }
+      await Category.findByIdAndUpdate(tour.categoryId, {
+        $addToSet: {
+          tours: tour._id,
+        },
+      });
+      return res.json({
+        message: "Thêm thành công",
+        data: tour,
+      });
+    } catch (error) {
+      return res.status(400).json({
+        message: error,
+      });
+    }
+  };
+  
