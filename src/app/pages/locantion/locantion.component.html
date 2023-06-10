@@ -1,5 +1,5 @@
 <section>
-  <div class="">
+  <div class="" >
       <div class="">
           <div class="my-10">
               <p class="font-medium text-base text-center pt-16">CHOOSE YOUR EXPERIENCE</p>
@@ -9,17 +9,15 @@
               <p class="font-medium text-4xl pt-2"> ĐẦU VIỆT NAM</p>
           </div>
       </div>
-      <div class="grid grid-cols-3 gap-4 justify-center pt-8 pb-10 mx-32">
-          <div class=" h-72 relative mx-5">
-              <a href="" routerLink="">
-                  <img class="w-full h-full rounded-md" src="" alt="">
+      <div class="flex justify-center mb-5">
+          <div class="relative px-4 grid gap-1 grid-cols-3 grid-rows-1">
+              <a class="relative m-3" routerLink="/location/detail/{{product._id}}" *ngFor="let product of products">
+                  <img class="w-[500px] h-[350px]  p-3" [src]="product.img" alt="">
                   <div class="absolute top-8 left-8  ">
-                      <p class=" px-2 py-2 text-white font-medium text-2xl"></p>
+                      <p class=" px-2 py-2 text-white font-medium text-2xl">{{ product.name }}</p>
                   </div>
               </a>
           </div>
-
-
 
 
       </div>
