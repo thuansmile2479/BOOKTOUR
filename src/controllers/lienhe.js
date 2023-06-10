@@ -64,3 +64,39 @@ export const addLienhe = async function (req, res) {
         });
     }
 };
+
+
+export const updateLienhe = async function (req, res) {
+    try {
+        const lienhe = await Lienhe.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,
+        });
+        if (!lienhe) {
+            return res.json({
+                message: "Cập nhật sản phẩm không thành công",
+            });
+        }
+        return res.json({
+            message: "Cập nhật sản phẩm thành công",
+            data: lienhe,
+        });
+    } catch (error) {
+        return res.status(400).json({
+            message: error,
+        });
+    }
+};
+export const deleteLienhe = async function (req, res) {
+    try {
+        const lienhe = await Lienhe.findByIdAndDelete(req.params.id);
+
+        return res.json({
+            message: "Xóa sản phẩm thành công",
+            lienhe,
+        });
+    } catch (error) {
+        return res.status(400).json({
+            message: error,
+        });
+    }
+};
