@@ -22,6 +22,8 @@ import { EditdiadiemComponent } from './admin/diadiem/editdiadiem/editdiadiem.co
 import { ListtourComponent } from './admin/tour/listtour/listtour.component';
 import { AddtourComponent } from './admin/tour/addtour/addtour.component';
 import { ListlienheComponent } from './admin/lienhe/listlienhe/listlienhe.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 
 
@@ -40,6 +42,11 @@ const routes: Routes = [
 
     ]
   } ,
+
+  { path: 'login', component: LoginComponent },
+
+  { path: 'register', component: RegisterComponent },
+
   {
     path: 'admin', component: LayoutAdminComponent,
     children: [

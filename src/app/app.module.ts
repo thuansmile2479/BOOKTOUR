@@ -30,6 +30,8 @@ import { ListtourComponent } from './admin/tour/listtour/listtour.component';
 import { AdddiadiemComponent } from './admin/diadiem/adddiadiem/adddiadiem.component';
 import { EdittourComponent } from './admin/tour/edittour/edittour.component';
 import { ListlienheComponent } from './admin/lienhe/listlienhe/listlienhe.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 
 
@@ -66,7 +68,9 @@ import { ListlienheComponent } from './admin/lienhe/listlienhe/listlienhe.compon
     ListtourComponent,
     EdittourComponent,
 
-    ListlienheComponent
+    ListlienheComponent,
+      LoginComponent,
+      RegisterComponent
 
 
   ],
