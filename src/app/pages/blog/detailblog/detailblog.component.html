@@ -1,0 +1,19 @@
+<div class="w-10/12 mx-auto" *ngIf="blog">
+    <div>
+        <div class="text-center mt-20">
+            <p class="font-medium text-4xl">{{ blog.name }} </p>
+        </div>
+    </div>
+    <div class="mx-48 my-20">
+        <div>
+            <p> {{ blog.content }}</p>
+        </div>
+        <div class="w-full h-full flex justify-center py-4">
+            <img class="max-w-[800px] max-h-[300px] "  [src]="blog.img" alt="">
+        </div>
+        <div>
+            <p> {{ blog.contentmain }}</p>
+        </div>
+
+    </div>
+</div>
