@@ -32,7 +32,7 @@ export class LienheComponent {
         mess: this.lienheForm.value.mess || "", 
       }
       this.lienheService.createLienhe(lienhe).subscribe(data => {
-        alert("Send contact successfully.")
+        alert("Gửi thông tin liên hệ thành công.")
         this.Router.navigateByUrl('')
         
       })

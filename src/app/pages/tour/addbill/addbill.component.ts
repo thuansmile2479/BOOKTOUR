@@ -20,6 +20,7 @@ export class AddbillComponent {
 
   billForm = this.formBuilder.group({
     name: ['', Validators.required],
+    tour: ['', Validators.required],
     nguoilon: ['', Validators.required],
     nguoibe: ['', Validators.required],
     location: ['', Validators.required],
@@ -30,14 +31,15 @@ export class AddbillComponent {
     if (this.billForm.valid) {
       const bill: Bill = {
         name: this.billForm.value.name || "", 
+        tour: this.billForm.value.tour || "", 
         nguoilon: this.billForm.value.nguoilon || "", 
         nguoibe: this.billForm.value.nguoibe || "", 
         location: this.billForm.value.location || "", 
         dateee: this.billForm.value.dateee || "", 
       }
       this.billService.createBill(bill).subscribe(data => {
-        alert("Send contact successfully.")
-        this.Router.navigateByUrl('')
+        alert("Bạn đã đặt tour thành công.")
+        this.Router.navigateByUrl('/tour/listbill')
         
       })
 

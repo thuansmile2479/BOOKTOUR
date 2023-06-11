@@ -34,6 +34,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AddbillComponent } from './pages/tour/addbill/addbill.component';
 import { DetailblogComponent } from './pages/blog/detailblog/detailblog.component';
+import { ListbillComponent } from './pages/tour/listbill/listbill.component';
+import { BilladminComponent } from './admin/bill/billadmin/billadmin.component';
 
 
 
@@ -74,7 +76,9 @@ import { DetailblogComponent } from './pages/blog/detailblog/detailblog.componen
       LoginComponent,
       RegisterComponent,
       AddbillComponent,
-      DetailblogComponent
+      DetailblogComponent,
+      ListbillComponent,
+      BilladminComponent
 
 
   ],

@@ -25,7 +25,9 @@ import { ListlienheComponent } from './admin/lienhe/listlienhe/listlienhe.compon
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AddbillComponent } from './pages/tour/addbill/addbill.component';
-import { DetailblogComponent } from './pages/blog/detailblog/detailblog.component';
+import { DetailblogComponent } from './pages/blog/detailblog/detailblog.component'; 
+import { BilladminComponent } from './admin/bill/billadmin/billadmin.component';
+import { ListbillComponent } from './pages/tour/listbill/listbill.component';
 
 
 
@@ -46,6 +48,7 @@ const routes: Routes = [
       { path: 'tour/detail/:id', component: DetailtourComponent },
 
       { path: 'tour/addbill', component: AddbillComponent },
+      { path: 'tour/listbill', component: ListbillComponent },
 
     ]
   } ,
@@ -68,14 +71,15 @@ const routes: Routes = [
       { path: 'addblog', component: AddblogComponent },
       { path: 'editblog/:id', component: EditblogComponent },
 
-      { path: 'edittour/:id', component: EdittourComponent },
-      { path: 'tour', component: ListtourComponent }, 
-      { path: 'addtour', component: AddtourComponent }, 
-      
-
+      { path: 'tour', component: ListtourComponent },
+      { path: 'addtour', component: AddtourComponent },
+      { path: 'edittour/:id', component: EdittourComponent }, 
+       
       { path: 'lienhe', component: ListlienheComponent }, 
 
+      { path: 'listbill', component: BilladminComponent },
 
+ 
     ]
   },
 
