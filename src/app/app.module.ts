@@ -32,6 +32,8 @@ import { EdittourComponent } from './admin/tour/edittour/edittour.component';
 import { ListlienheComponent } from './admin/lienhe/listlienhe/listlienhe.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { AddbillComponent } from './pages/tour/addbill/addbill.component';
+import { DetailblogComponent } from './pages/blog/detailblog/detailblog.component';
 
 
 
@@ -70,7 +72,9 @@ import { RegisterComponent } from './pages/register/register.component';
 
     ListlienheComponent,
       LoginComponent,
-      RegisterComponent
+      RegisterComponent,
+      AddbillComponent,
+      DetailblogComponent
 
 
   ],

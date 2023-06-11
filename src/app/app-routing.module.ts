@@ -24,6 +24,8 @@ import { AddtourComponent } from './admin/tour/addtour/addtour.component';
 import { ListlienheComponent } from './admin/lienhe/listlienhe/listlienhe.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { AddbillComponent } from './pages/tour/addbill/addbill.component';
+import { DetailblogComponent } from './pages/blog/detailblog/detailblog.component';
 
 
 
@@ -34,11 +36,16 @@ const routes: Routes = [
       { path: '', component: HomeComponent },
       { path: 'pagedetail', component: PagdetailComponent },
       { path: 'posts', component: BlogComponent },
+      { path: 'posts/detailblog/:id', component: DetailblogComponent },
+
+
       { path: 'lienhe', component: LienheComponent },
       { path: 'location', component: LocantionComponent },
       { path: 'location/detail/:id', component: DetaillocantionComponent },
       { path: 'tour', component: TourComponent },
       { path: 'tour/detail/:id', component: DetailtourComponent },
+
+      { path: 'tour/addbill', component: AddbillComponent },
 
     ]
   } ,
