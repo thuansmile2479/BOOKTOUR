@@ -7,6 +7,10 @@ const billSchema = new mongoose.Schema(
             type: String,
             require: true,
         },
+        tour: {
+            type: String,
+            require: true,
+        },
         nguoilon: {
             type: String,
         },
