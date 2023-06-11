@@ -54,3 +54,54 @@ export const getAllBills = async (req, res) => {
         });
     }
 };
+
+export const getBillId = async function (req, res) {
+    // const id = req.params.id;
+    // const { data: bill } = await axios.get(` ${API_URI}/bills/${id}`);
+    try {
+        const bill = await Bill.findById(req.params.id).populate(
+            "categoryId"
+        );
+        if (bill.length === 0) {
+            return res.json({
+                message: "Không có sản phẩm nào",
+            });
+        }
+        return res.json(bill);
+    } catch (error) {
+        return res.status(400).json({
+            message: error,
+        });
+    }
+};
+export const addBill = async function (req, res) {
+    try {
+        const { error } = billSchema.validate(req.body);
+        if (error) {
+            return res.status(400).json({
+                message: error.details[0].message,
+            });
+        }
+        // const { data: bill } = await axios.post(`${API_URI}/bills`, req.body);
+        //   const bills = await response.json();
+        const bill = await Bill.create(req.body);
+        if (!bill) {
+            return res.json({
+                message: "Không thêm được sản phẩm",
+            });
+        }
+        await Category.findByIdAndUpdate(bill.categoryId, {
+            $addToSet: {
+                bills: bill._id,
+            },
+        });
+        return res.json({
+            message: "Thêm thành công",
+            data: bill,
+        });
+    } catch (error) {
+        return res.status(400).json({
+            message: error,
+        });
+    }
+};
