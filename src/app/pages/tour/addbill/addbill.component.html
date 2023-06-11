@@ -1,44 +1,52 @@
 <div class="w-11/12 mx-auto my-0 ">
-    <!-- <p class="text-3xl my-4 border-b-2">Thêm bài viết mới</p> -->
-    <form action="" [formGroup]="billForm" (ngSubmit)="onHandleSubmit()" class="w-2/3 mx-auto" >
-        <div class="pt-2">
-            <p class="px-2 text-xl">Tên Tour: </p>
-            <!-- <app-nametour></app-nametour> -->
-            
-        </div>
+
+
+
+    <form action="" [formGroup]="billForm" (ngSubmit)="onHandleSubmit()" class="w-2/3 mx-auto">
 
         <div class="pt-2">
             <p class="px-2 text-xl">Họ tên</p>
-            <input class="px-2 py-[2px] border border-slate-700 w-11/12 mx-2" type="text" 
-                placeholder="Họ tên"  id="name"   formControlName="name" name="name">
+            <input class="px-2 py-[2px] border border-slate-700 w-11/12 mx-2" type="text" placeholder="Họ tên" id="name"
+                formControlName="name" name="name">
+        </div>
+        
+       
+        <div class="pt-2">
+            <p class="px-2 text-xl">Địa điểm</p>
+            <input class="px-2 py-[2px] border border-slate-700 w-11/12 mx-2" type="text" placeholder="Địa điểm" id="tour"
+                formControlName="tour" name="tour">
         </div>
 
         <div class="pt-2">
-            <p class="px-2 text-xl">Số người lớn</p>
-            <input class="px-2 py-[2px] border border-slate-700 w-11/12 mx-2" type="text" placeholder="Số người lớn"  id="nguoilon"  formControlName="nguoilon" name="nguoilon">
+            <p class="px-2 text-xl">Số người lớn [ $100.00/người ]</p>
+            <input class="px-2 py-[2px] border border-slate-700 w-11/12 mx-2" type="text" placeholder="Số người lớn"
+                id="nguoilon" formControlName="nguoilon" name="nguoilon">
         </div>
 
         <div class="pt-2">
-            <p class="px-2 text-xl">Số trẻ em (5 -> 13 tuổi)</p>
-            <input class="px-2 py-[2px] border border-slate-700 w-11/12 mx-2" type="text" placeholder="Số trẻ em"  id="nguoibe"  formControlName="nguoibe" name="nguoibe">
+            <p class="px-2 text-xl">Số trẻ em (5 -> 13 tuổi)  [ $60.00/bé ]</p>
+            <input class="px-2 py-[2px] border border-slate-700 w-11/12 mx-2" type="text" placeholder="Số trẻ em"
+                id="nguoibe" formControlName="nguoibe" name="nguoibe">
         </div>
-    
+
         <div class="pt-2">
             <p class="px-2 text-xl">Địa điểm đón</p>
-            <input class="px-2 py-[2px] border border-slate-700 w-11/12 mx-2" type="text" placeholder="Địa điểm đón"  id="location"  formControlName="location" name="location">
+            <input class="px-2 py-[2px] border border-slate-700 w-11/12 mx-2" type="text" placeholder="Địa điểm đón"
+                id="location" formControlName="location" name="location">
         </div>
 
-        
+
 
         <div class="pt-2">
             <p class="px-2 text-xl">Thời gian đi</p>
-            <input class="px-2 py-[2px] border border-slate-700 w-11/12 mx-2" type="date"  placeholder="Thời gian đi" id="dateee"  formControlName="dateee" name="dateee">
+            <input class="px-2 py-[2px] border border-slate-700 w-11/12 mx-2" type="date" placeholder="Thời gian đi"
+                id="dateee" formControlName="dateee" name="dateee">
         </div>
 
-        
 
-         
-        
+
+
+
         <div class="flex space-x-3 ml-2">
             <button type="submit" [disabled]="!billForm.valid"
                 class="w-28 mt-4 flex items-center justify-center bg-blue-500 p-2 border rounded-full hover:bg-blue-800 hover:text-white hover:fill-white hover:border-stone-800 ">
