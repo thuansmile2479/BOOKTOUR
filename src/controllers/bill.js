@@ -8,6 +8,7 @@ dotenv.config();
 const { API_URI } = process.env;
 const billSchema = joi.object({
     name: joi.string().required(),
+    tour: joi.string().required(),
     nguoilon: joi.string().required(),
     nguoibe: joi.string().required(),
     location: joi.string().required(),  
