@@ -105,3 +105,39 @@ export const addBill = async function (req, res) {
         });
     }
 };
+
+
+export const updateBill = async function (req, res) {
+    try {
+        const bill = await Bill.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,
+        });
+        if (!bill) {
+            return res.json({
+                message: "Cập nhật sản phẩm không thành công",
+            });
+        }
+        return res.json({
+            message: "Cập nhật sản phẩm thành công",
+            data: bill,
+        });
+    } catch (error) {
+        return res.status(400).json({
+            message: error,
+        });
+    }
+};
+export const deleteBill = async function (req, res) {
+    try {
+        const bill = await Bill.findByIdAndDelete(req.params.id);
+
+        return res.json({
+            message: "Xóa sản phẩm thành công",
+            bill,
+        });
+    } catch (error) {
+        return res.status(400).json({
+            message: error,
+        });
+    }
+};
