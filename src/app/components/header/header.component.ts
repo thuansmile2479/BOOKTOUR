@@ -1,4 +1,5 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -30,5 +31,13 @@ export class HeaderComponent implements OnChanges, OnInit {
       //   this.UserName = JSON.stringify(isLogin)
       // }
     }
+  }
+
+  constructor(private router: Router ) {
+  }
+
+  logout() {
+    localStorage.removeItem('user');
+    // this.router.navigateByUrl('/')
   }
 }
