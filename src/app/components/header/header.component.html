@@ -62,10 +62,15 @@
                             <span>0842755626</span>
                             <i class="fas fa-phone-alt m-2"></i>
                         </div>
-                        <button class="text-white rounded-xl w-20 py-1 bg-red-500 hover:bg-orange-500 m-1"
+                        <div *ngIf="login == false">
+                            <button class="text-white rounded-xl w-20 py-1 bg-red-500 hover:bg-orange-500 m-1"
                             routerLink="/register">Sign up</button>
                         <button class="text-white rounded-xl w-20 py-1 bg-red-500 hover:bg-orange-500 m-1"
                             routerLink="/login">Login</button>
+                        </div>
+                        <div *ngIf="login == true">
+                            {{UserName}}
+                        </div>
                     </div>
                 </div>
                 <!-- Banner -->
