@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <title>Document</title>
     <!-- <link rel="stylesheet" href="header.component.css"> -->
-    
+
 </head>
 
 <body>
@@ -43,8 +43,7 @@
                                     class="group/edit invisible group-hover/item:visible w-1 mx-auto my-2 rounded-full text-center h-1 bg-orange-300">
                                 </p>
                             </li>
-                            <li class="hover:text-red-400 px-4 flex-col group/item"><a
-                                    routerLink="/pagedetail">PAGE</a>
+                            <li class="hover:text-red-400 px-4 flex-col group/item"><a routerLink="/pagedetail">PAGE</a>
                                 <p
                                     class="group/edit invisible group-hover/item:visible w-1 mx-auto my-2 rounded-full text-center h-1 bg-orange-300">
                                 </p>
@@ -64,12 +63,13 @@
                         </div>
                         <div *ngIf="login == false">
                             <button class="text-white rounded-xl w-20 py-1 bg-red-500 hover:bg-orange-500 m-1"
-                            routerLink="/register">Sign up</button>
-                        <button class="text-white rounded-xl w-20 py-1 bg-red-500 hover:bg-orange-500 m-1"
-                            routerLink="/login">Login</button>
+                                routerLink="/register">Sign up</button>
+                            <button class="text-white rounded-xl w-20 py-1 bg-red-500 hover:bg-orange-500 m-1"
+                                routerLink="/login">Login</button>
                         </div>
                         <div *ngIf="login == true">
                             {{UserName}}
+                            <button class="w-[100px] border rounded-xl h-[40px] bg-red-500" (click)="logout()">Logout</button>
                         </div>
                     </div>
                 </div>
