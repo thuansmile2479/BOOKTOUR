@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./gd-admin.component.css']
 })
 export class GdAdminComponent {
+  UserName = '';
+  login=false;
+  ngOnInit(): void {
+    var isLogin = localStorage.getItem('user') as string;
+      var user = JSON.parse(isLogin);
+      console.log(user);
+      
+      if(user) {
+        this.login = true;
+        this.UserName = user.user.name;
+      }
 
+      console.log(this.UserName);
+      
+  }
 }

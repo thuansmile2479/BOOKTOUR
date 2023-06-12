@@ -22,7 +22,9 @@
                             src=" " alt="">
                     </div>
                     <div class="ml-4">
-                        <p>Duy Thuan</p>
+                        <div *ngIf="login == true">
+                            {{UserName}}
+                        </div>
                         <p>
                             <a class="hover:text-blue-300" href="">Xem website</a>
                         </p>
