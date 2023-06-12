@@ -21,7 +21,6 @@ export class LoginComponent {
   onSubmit() {
     const data = this.authForm.value;
     this.authService.signIn(data).subscribe((ressponse) => {
-      alert("Dang nhap tai khoan thanh cong!")
       const user = {
         accessToken: ressponse.accessToken,
         user: ressponse.user
@@ -31,7 +30,12 @@ export class LoginComponent {
         'user',
         JSON.stringify(user)
       );
-      this.route.navigateByUrl('/')
+      if(ressponse.user.role == 'admin') {
+        this.route.navigateByUrl('/admin/dashboard')
+      } else {
+        this.route.navigateByUrl('/');
+      }
+      
     }, error => {
       alert(error.error.message)
       
