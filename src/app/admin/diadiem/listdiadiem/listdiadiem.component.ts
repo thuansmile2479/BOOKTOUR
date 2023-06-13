@@ -10,11 +10,12 @@ import { IProduct } from 'src/app/interfaces/diadiem';
   styleUrls: ['./listdiadiem.component.css']
 })
 export class ListdiadiemComponent {
- 
+
 
   products: any[] | undefined;
   product: any = [];
   constructor(private productService: ProductService, private router: Router) {}
+  searchName: string = '';
 
   ngOnInit() {
     this.getProducts();
@@ -36,13 +37,24 @@ export class ListdiadiemComponent {
   }
 
 
-  
+
   deleteProduct(id: number | string) {
     this.productService.deleteProduct(id).subscribe(() => {
       this.getProducts();
       confirm('Bạn có chắc muốn xóa không');
     });
-  } 
+  }
+  onSearch() {
+    this.productService.getProducts().subscribe((data: any) => {
+      if (this.searchName) {
+        this.products = data.filter((product: any) =>
+          product.name.toLowerCase().includes(this.searchName.toLowerCase())
+        );
+      } else {
+        this.products = data;
+      }
+    });
+  }
 
 
 }
